@@ -157,6 +157,8 @@ $(document).ready(function() {
                 await insertionSort();
             else if(algo_selected == "Quick Sort")
                 await quickSort();
+            else if(algo_selected == "Merge Sort")
+                await mergeSort();
             else {
                 $("#no-algo-warning").removeClass('display-none');
                 $("#no-algo-warning").addClass('display-flex');
