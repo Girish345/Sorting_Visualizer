@@ -17,6 +17,7 @@ async function insertionSort() {
         key = arr[i];
 
         while(j >= 0 && arr[j] > key) {
+            if (!continueSorting) return;
             setColor(j, COMPARE);
             await sleep(delay);
 

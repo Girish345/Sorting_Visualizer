@@ -29,6 +29,7 @@ var element_width_max;
 var margin_element;
 
 var algo_selected;
+var continueSorting = true;
 
 function updateValues() {
     array_container_width = Math.floor( $("#array-container").width() );
@@ -130,6 +131,9 @@ $(document).ready(function() {
             createArray();
         }
     );
+    $("#stop").click(function() {
+        continueSorting = false;
+    });
 
     $(".algo-btn").click(
         function() {

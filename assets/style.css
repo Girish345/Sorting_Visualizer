@@ -55,7 +55,7 @@ body {
     margin: 1em auto;
 }
 
-.algo-btn, #sort, #randomize {
+.algo-btn, #sort,#stop, #randomize {
     background-color: #222;
     margin: 5px 2px;
     padding: 5px 20px;
@@ -70,6 +70,10 @@ body {
     color: #222;
 }
 
+#stop{
+    float: right;
+    background-color:gray
+}
 #sort {
     float: right;
     background-color: mediumspringgreen;

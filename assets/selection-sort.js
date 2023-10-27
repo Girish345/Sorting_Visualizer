@@ -2,12 +2,14 @@ async function selectionSort() {
     var i, j, min_idx;
 
     for(i = 0; i < size - 1; i++) {
+       
         await sleep(delay);
 
         min_idx = i;
         setColor(min_idx, SELECTED);
 
         for(j = i + 1; j < size; j++) {
+            if (!continueSorting) return;
             await sleep(delay);
 
             setColor(j, COMPARE);

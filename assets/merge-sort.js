@@ -4,17 +4,30 @@ async function mergeSort() {
 }
 
 async function mergeSortRecursive(low, high) {
+    if (!continueSorting) {
+        return;
+    }
+   
     if (low < high) {
         var mid = Math.floor((low + high) / 2);
 
         await mergeSortRecursive(low, mid);
+        if (!continueSorting) {
+            return;
+        }
         await mergeSortRecursive(mid + 1, high);
+        if (!continueSorting) {
+            return;
+        }
 
         await merge(low, mid, high);
     }
 }
 
 async function merge(low, mid, high) {
+    if (!continueSorting) {
+        return;
+    }
     var n1 = mid - low + 1;
     var n2 = high - mid;
 
