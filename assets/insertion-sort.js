@@ -7,7 +7,7 @@ async function insertionSort() {
 
     setColor(0, SORTED);
 
-    for(i = 1; i < size; i++) {
+    for (i = 1; i < size; i++) {
         await sleep(delay);
 
         setColor(i, SELECTED);
@@ -16,11 +16,16 @@ async function insertionSort() {
         j = i - 1;
         key = arr[i];
 
-        while(j >= 0 && arr[j] > key) {
-            setColor(j, COMPARE);
+        while (j >= 0 && arr[j] > key) {
             await sleep(delay);
 
-            swap(j, j + 1);
+            if (!continueSorting) {
+                return; // Exit the function if continueSorting is false
+            }
+
+            setColor(j, COMPARE);
+
+            await swap(j, j + 1);
             setColor(j, SELECTED);
             setColor(j + 1, COMPARE);
             await sleep(delay);
@@ -34,3 +39,6 @@ async function insertionSort() {
         setColor(j + 1, SORTED);
     }
 }
+
+// Add this line to reset the sorting flag
+var continueSorting = true;
