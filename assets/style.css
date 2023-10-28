@@ -4,7 +4,7 @@
 
 :root{
     --primary-color:#edf2fc;
-    --seconday-color:#212121;
+    --seconday-color:#000106;
 
    
 
@@ -12,7 +12,7 @@
 
 .dark-theme{
     --primary-color:#000106;
-    --secondary-color:#fff;
+    --secondary-color:#edf2fc;
 }
 
 #icon{
@@ -133,6 +133,7 @@ body {
     margin: 0;
     text-align: center;
     font-size: 1.2em;
+    /* color:var(--secondary-color); */
 }
 
 .slider {
