@@ -12,7 +12,15 @@
     <title>Sorting Visualizer</title>
 </head>
 <body>
+    
+    <div class="container1" style="text-align: right; margin-top:20px; margin-right:100px;">
+        <div class="icon_img">
+            <img src="assets/images/moon.png" id="icon">
+        </div>
+    </div>
     <div class="container">
+       
+        
         <div id="array-container">
             <div id="array"></div>
             <h5 id="no-algo-warning" class="display-none">No Algorithm Selected!</h5>
@@ -43,5 +51,16 @@
     <script src="assets/bubble-sort.js"></script>
     <script src="assets/selection-sort.js"></script>
     <script src="assets/insertion-sort.js"></script>
+    <script>
+        var icon=document.getElementById("icon");
+        icon.onclick=function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+                icon.src="assets/images/sun.png";
+            }else{
+                icon.src="assets/images/moon.png";
+            }
+        }
+    </script>
 </body>
 </html>

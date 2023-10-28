@@ -2,11 +2,31 @@
     outline: none;
 }
 
+:root{
+    --primary-color:#edf2fc;
+    --seconday-color:#212121;
+
+   
+
+}
+
+.dark-theme{
+    --primary-color:#000106;
+    --secondary-color:#fff;
+}
+
+#icon{
+    width:30px;
+    cursor:pointer;
+}
 body {
-    background-color: black;
+    background-color: var(--primary-color);
     font-family: "Catamaran", sans-serif;
     color: #ccc;
 }
+
+
+
 
 .display-none {
     display: none;
@@ -182,3 +202,9 @@ body {
 .slider:disabled::-moz-range-thumb {
     cursor: not-allowed;
 }
+
+
+
+
+
+
